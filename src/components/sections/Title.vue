@@ -4,7 +4,7 @@ import { ElIcon } from 'element-plus'
 import { Document, Files, MagicStick, Picture, DataAnalysis, Film } from '@element-plus/icons-vue'
 
 // logo地址，没有则置为""即可
-const logo = './logo.png'
+// const logo = './logo.png'
 
 // 标题
 const title = 'UniDiffGrasp: A Unified Framework Integrating VLM Reasoning and VLM-Guided Part Diffusion for Open-Vocabulary Constrained Grasping with Dual Arms'
@@ -22,13 +22,13 @@ const title_supp_color = '#42B883'
 const btn_color = '#444444'
 
 // 作者清单（包含作者姓名、头像、主页、地址序号）
-const authors = [
-  {
-    name: "Jilin University zero one lab ",
-    icon: "./logo.png",
-    address_flag: "1,#"
-  },
-]
+// const authors = [
+//   {
+//     name: "Jilin University zero one lab ",
+//     icon: "./logo.png",
+//     address_flag: "1,#"
+//   },
+// ]
 
 // 地址清单（包含地址名称、头像、主页、地址序号）
 
@@ -54,7 +54,7 @@ const buttons = [
   },
   {
     disabled: true,
-    name: "中译版",
+    name: "arXiv",
     component: Document,
   },
   {
@@ -63,18 +63,18 @@ const buttons = [
     link: "",
     component: Files,
   },
-  {
-    disabled: false,
-    name: "Demo",
-    link: "",
-    component: MagicStick,
-  },
-  {
-    disabled: false,
-    name: "Video",
-    link: "",
-    component: Film,
-  },
+  // {
+  //   disabled: false,
+  //   name: "Demo",
+  //   link: "",
+  //   component: MagicStick,
+  // },
+  // {
+  //   disabled: false,
+  //   name: "Video",
+  //   link: "",
+  //   component: Film,
+  // },
 ]
 
 </script>
