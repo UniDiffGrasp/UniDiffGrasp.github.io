@@ -3,11 +3,40 @@
     import { ElTable } from 'element-plus';
 
     const singleArmData = [
-        { method: 'Method', bottle_gsr: 'bottle', knife_gsr: 'knife', screwdriver_gsr: 'screwdriver', pan_gsr: 'pan', mug_gsr: 'mug', pliers_scissors_gsr: 'pliers', kettle_gsr: 'kettle', average_gsr: 'average' },
-        { bottle_gsr: 'GSR', bottle_cfr: 'CFR', knife_gsr: 'GSR', knife_cfr: 'CFR', screwdriver_gsr: 'GSR', screwdriver_cfr: 'CFR', pan_gsr: 'GSR', pan_cfr: 'CFR', mug_gsr: 'GSR', mug_cfr: 'CFR', pliers_scissors_gsr: 'GSR', pliers_scissors_cfr: 'CFR', kettle_gsr: 'GSR', kettle_cfr: 'CFR', average_gsr: 'CSR', average_cfr: 'CFR' },
-        { method: 'gsamgraspnet', bottle_gsr: 'N/A', bottle_cfr: '21/30', knife_gsr: '20/30', knife_cfr: '16/30', screwdriver_gsr: '21/30', screwdriver_cfr: '24/30', pan_gsr: '11/30', pan_cfr: '8/30', mug_gsr: '7/30', mug_cfr: '6/30', pliers_scissors_gsr: '22/30', pliers_scissors_cfr: '14/30', kettle_gsr: '9/30', kettle_cfr: '4/30', average_gsr: '0.538', average_cfr: '0.443' },
-        { method: 'thinkgrasp', bottle_gsr: 'N/A', bottle_cfr: '25/30', knife_gsr: '23/30', knife_cfr: '24/30', screwdriver_gsr: '21/30', screwdriver_cfr: '25/30', pan_gsr: '22/30', pan_cfr: '23/30', mug_gsr: '18/30', mug_cfr: '15/30', pliers_scissors_gsr: '16/30', pliers_scissors_cfr: '20/30', kettle_gsr: '22/30', kettle_cfr: '16/30', average_gsr: '0.705', average_cfr: '0.667' },
-        { method: 'Our', bottle_gsr: 'N/A', bottle_cfr: '27/30', knife_gsr: '28/30', knife_cfr: '27/30', screwdriver_gsr: '29/30', screwdriver_cfr: '26/30', pan_gsr: '30/30', pan_cfr: '27/30', mug_gsr: '25/30', mug_cfr: '24/30', pliers_scissors_gsr: '27/30', pliers_scissors_cfr: '24/30', kettle_gsr: '25/30', kettle_cfr: '24/30', average_gsr: '0.876', average_cfr: '0.9' },
+        // Row 0: Main category headers
+        { method: 'Method', bottle_gsr: 'bottle', knife_gsr: 'knife', screwdriver_gsr: 'screwdriver', pan_gsr: 'pan', mug_gsr: 'mug', kettle_gsr: 'kettle', average_gsr: 'average' },
+        // Row 1: Sub-headers (GSR/CFR labels)
+        { bottle_gsr: 'GSR', bottle_cfr: 'CFR', knife_gsr: 'GSR', knife_cfr: 'CFR', screwdriver_gsr: 'GSR', screwdriver_cfr: 'CFR', pan_gsr: 'GSR', pan_cfr: 'CFR', mug_gsr: 'GSR', mug_cfr: 'CFR', kettle_gsr: 'GSR', kettle_cfr: 'CFR', average_gsr: 'GSR', average_cfr: 'CFR' },
+        // Row 2: gsamgraspnet data
+        { method: 'gsamgraspnet',
+          bottle_gsr: '0.767', bottle_cfr: '0.700',
+          knife_gsr: '0.667', knife_cfr: '0.533',
+          screwdriver_gsr: '0.700', screwdriver_cfr: '0.800',
+          pan_gsr: '0.367', pan_cfr: '0.267',
+          mug_gsr: '0.233', mug_cfr: '0.200',
+          kettle_gsr: '0.300', kettle_cfr: '0.133',
+          average_gsr: '0.538', average_cfr: '0.443'
+        },
+        // Row 3: thinkgrasp data
+        { method: 'thinkgrasp',
+          bottle_gsr: '0.833', bottle_cfr: '0.767',
+          knife_gsr: '0.800', knife_cfr: '0.700',
+          screwdriver_gsr: '0.833', screwdriver_cfr: '0.733',
+          pan_gsr: '0.600', pan_cfr: '0.767',
+          mug_gsr: '0.500', mug_cfr: '0.600',
+          kettle_gsr: '0.733', kettle_cfr: '0.533',
+          average_gsr: '0.705', average_cfr: '0.667'
+        },
+        // Row 4: Our data
+        { method: 'Our',
+          bottle_gsr: '0.900', bottle_cfr: '0.933',
+          knife_gsr: '0.900', knife_cfr: '0.967',
+          screwdriver_gsr: '0.867', screwdriver_cfr: '1.000',
+          pan_gsr: '0.900', pan_cfr: '1.000',
+          mug_gsr: '0.833', mug_cfr: '0.800',
+          kettle_gsr: '0.833', kettle_cfr: '0.800',
+          average_gsr: '0.876', average_cfr: '0.900'
+        },
     ];
 
     const dualArmData = [
@@ -103,10 +132,7 @@
                                     <el-table-column prop="mug_gsr" width="90" align="center" />
                                     <el-table-column prop="mug_cfr" width="90" align="center" />
                                 </el-table-column>
-                                <el-table-column label="pliers" width="180" align="center">
-                                    <el-table-column prop="pliers_scissors_gsr" width="90" align="center" />
-                                    <el-table-column prop="pliers_scissors_cfr" width="90" align="center" />
-                                </el-table-column>
+                                <!-- Pliers column removed -->
                                 <el-table-column label="Kettle" width="180" align="center">
                                     <el-table-column prop="kettle_gsr" width="90" align="center" />
                                     <el-table-column prop="kettle_cfr" width="90" align="center" />
