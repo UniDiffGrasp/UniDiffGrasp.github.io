@@ -7,17 +7,26 @@ const imageGallery = ref([
   {
     id: 1, 
     src: './logo.png', 
-    caption: '这是第一张图片的描述文字。它可以稍微长一点，解释图片内容。'
+    caption: 'Fig. 1. UniDiffGrasp: Open-Vocabulary Constrained Grasping Exampleand Performance Comparison. UniDiffGrasp innovatively applies a VLMguided
+ part diffusion strategy, achieving state-of-the-art open-vocabularypart grasping and uniquely extending this precision to complex dualarmcooperation.
+Its uniffed end-to-end framework, integrating single anddual-arm capabilities, demonstrates exceptional real-world performance and strong generalization.
+'
   },
   {
     id: 2,
     src: './logo.png',
-    caption: '第二张图片的说明，突出重点信息。'
+    caption: 'Fig. 2. UniDiffGrasp Framework: Integrating VLM Reasoning, Multi-Stage Segmentation, and Part-Guided Diffusion for Grasp Generation. User input
+(e.g., ’I’d like to stew some soup’) and visual context are ffrst processed by a VLM (GPT-4o) to determine the target object (’pot’), functional part (’handle’),
+and operation mode (’dual-arm’). Multi-stage segmentation—Grounded SAM for object localization and VLPart for precise part identiffcation—then grounds
+these semantic targets into geometric constraints. Finally, these constraints guide the Part-Guided Diffusion strategy, employing the dual-arm coordination
+method (Sec. III-C) to deffne distinct target regions (e.g., for each handle of the pot) and select stable cooperative grasps.
+'
   },
   {
     id: 3,
     src: './logo.png', 
-    caption: '这是第三张图片，一个简短的标题。'
+    caption: 'Fig. 3. Principle of Dual-Arm Grasp Generation in UniDiffGrasp usingCoordinated Part-Guided Diffusion
+'
   }
 ]);
 
